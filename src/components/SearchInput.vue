@@ -47,22 +47,19 @@ const computedModel = computed({
 });
 
 
-const onInput = (evt) => {
+const onInput = (event) => {
   if (event.keyCode == 13) {
     onSearch()
     return
   }
-  computedModel.value = evt?.target?.value;
+  computedModel.value = event?.target?.value;
 };
 const onSearch = () => {
   emit("search");
 }
 </script>
 
-<style
-  scoped
-  lang='scss'
->
+<style scoped lang='scss'>
 .search {
   display: flex;
   align-items: stretch;
